@@ -1,0 +1,15 @@
+version: '3'
+services:
+  jupiter:
+    image: jupyter/datascience-notebook:3772fffc4aa4
+    container_name: jupiter_lab
+    ports:
+      - 10000:8888
+    volumes:
+      - ./data:/home/jovyan/work
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+  
+volumes:
+  data:
+    driver: "local"
