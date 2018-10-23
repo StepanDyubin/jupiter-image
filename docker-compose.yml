@@ -6,7 +6,7 @@ services:
     ports:
       - 10000:8888
     volumes:
-      - ./data:/home/jovyan/work
+      - ./data:/home/jovyan
     environment:
       - JUPYTER_ENABLE_LAB=yes
   
